@@ -12,7 +12,8 @@ def create_folder_and_files(folder_name):
     # Create an empty text file
     with open(text_file_path, 'w') as file:
         pass
-
+        
+        
     # Create a python file with the specified lines
     with open(python_file_path, 'w') as file:
         file.write("with open('.\input.txt', 'r') as file:\n    input=file.read().splitlines()\n\n")
