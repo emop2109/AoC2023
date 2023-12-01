@@ -3,7 +3,6 @@ import re
 with open('.\input.txt', 'r') as file:
     input=file.read().splitlines()
 
-alphabet = 'abcdefghijklmnopqrtstuvwxyz'
 # ---------------------------------------- Del 1 -------------------------------------------
 sum = 0
 for line in input:
