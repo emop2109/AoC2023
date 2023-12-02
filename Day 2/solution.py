@@ -25,8 +25,8 @@ sum = 0
 for idx, game in enumerate(input):
     _dict_ = {'red': 0, 'green': 0, 'blue': 0}
     moves = re.findall(r'(\d+)\s+(red|green|blue)', game)
-    for move in moves:
-        _dict_[move[1]] = max(int(move[0]), _dict_[move[1]])
+    for (number, key) in moves:
+        _dict_[key] = max(int(number), _dict_[key])
     sum += (_dict_['red']*_dict_['green']*_dict_['blue'])
 
 print(sum)
