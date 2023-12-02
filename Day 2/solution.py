@@ -8,8 +8,8 @@ _max_ = {'red': 12, 'green': 13 ,'blue': 14}
 # ---------------------------------------- Del 1 -------------------------------------------
 
 def check_moves(moves):
-    for move in moves:
-        if int(move[0]) > _max_[move[1]]:
+    for (number, key) in moves:
+        if int(number) > _max_[key]:
             return False
     return True
 
