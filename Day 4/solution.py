@@ -1,10 +1,12 @@
+import re
+
 with open('.\input.txt', 'r') as file:
     input=file.read().splitlines()
 
 def winning_numbers(card):
     return len(
-        set([int(x) for x in card.split(' |')[0].split(': ')[1].split(' ') if x.isdigit()]).intersection(
-            set([int(x) for x in card.split('| ')[1].split(' ') if x.isdigit()])
+        set([int(x) for x in re.findall(r'\d+', card.split('|')[1])]).intersection(
+            set([int(x) for x in re.findall(r'\d+', re.split(r'[:|]', card)[1])])
         )
     )
 # ---------------------------------------- Del 1 -------------------------------------------
