@@ -1,6 +1,3 @@
-import re
-import pandas as pd
-
 with open('.\input.txt', 'r') as file:
     input=file.read().splitlines()
 
