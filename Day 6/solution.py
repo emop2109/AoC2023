@@ -16,4 +16,4 @@ print(wins)
 # ---------------------------------------- Del 2 -------------------------------------------
 race = tuple([int(''.join([x for x in re.findall(r'\d+', input[0])])), int(''.join([x for x in re.findall(r'\d+', input[1])]))])
 t1, t2 = (-race[0] + math.sqrt(race[0]**2-4*race[1]))/2, (-race[0] - math.sqrt(race[0]**2-4*race[1]))/2
-print(round(t1-t2))
+print(math.ceil(t1)-math.ceil(t2))
