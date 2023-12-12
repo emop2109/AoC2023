@@ -52,4 +52,4 @@ while len(queue):
         string_list[position[1]] = 'I' if grid[position[0]][position[1]] == 'o' else '#'
         grid[position[0]] = ''.join(string_list)
         visited.append(position)
-print(sum([1 for r in range(len(grid)) for c in range(grid[0]) if grid[r][c] == 'I']))
+print(sum([1 for r in range(len(grid)) for c in range(len(grid[0])) if grid[r][c] == 'I']))
